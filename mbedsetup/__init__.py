@@ -25,10 +25,9 @@ def main():
         "@echo http://mbed.org/users/mbed_official/code/mbed/builds/87f2f5183dfb > mbed.bld",
         "mbed deploy",
         
-        "mbed add http://os.mbed.com/teams/Lancaster-University/code/mbed-src/",
-        
         "copy /Y .\\microbit\\microbit-dal\\source\\asm\\CortexContextSwitch.s.gcc .\\microbit\\microbit-dal\\source\\asm\\CortexContextSwitch.s",
         
+        "mbed add http://os.mbed.com/teams/Lancaster-University/code/mbed-src/",
         "rmdir /s /q mbed",
     ]
     for cmd in cmd_list:
