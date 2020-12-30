@@ -21,15 +21,14 @@ def main():
         "mbed config root .",
         "mbed target NRF51_MICROBIT",
         "mbed toolchain GCC_ARM",
-
+        
         "@echo http://mbed.org/users/mbed_official/code/mbed/builds/87f2f5183dfb > mbed.bld",
         "mbed deploy",
         
-        "mbed add https://developer.mbed.org/teams/Lancaster-University/code/microbit/",
         "mbed add http://os.mbed.com/teams/Lancaster-University/code/mbed-src/",
         
         "copy /Y .\\microbit\\microbit-dal\\source\\asm\\CortexContextSwitch.s.gcc .\\microbit\\microbit-dal\\source\\asm\\CortexContextSwitch.s",
-
+        
         "rmdir /s /q mbed",
     ]
     for cmd in cmd_list:
